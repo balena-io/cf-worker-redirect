@@ -10,19 +10,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: 14
       - name: Cache node modules
         uses: c-hive/gha-npm-cache@v1
-        
+
       - name: Install dependencies
         run: npm ci
 
       - name: Generate wrangler.toml
         run: npm run generate
-        env: 
+        env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_KV_NAMESPACE_REDIRECT_KV: ${{ secrets.CF_KV_NAMESPACE_REDIRECT_KV }}
           CF_WORKERS_DEV: true
