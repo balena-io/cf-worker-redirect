@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-undef
-declare const REDIRECT_KV: KVNamespace;
+declare const REDIRECT_KV: any; // KVNanyamespace;
 
 export async function handleRequest(request: Request): Promise<Response> {
 	const requestUrl = new URL(request.url);
@@ -45,12 +45,20 @@ export async function handleRequest(request: Request): Promise<Response> {
 
 	// Construct URL class from target (value from KV) so we can easily manipulate it
 	const targetUrl = new URL(target);
+	
 	// Default to using targetUrl path
 	let redirectPath = targetUrl.pathname;
+	
 	// Check if the request has a path though
 	if (!emptyPath(requestPath) && emptyPath(targetUrl.pathname)) {
 		// Since request has a path but target does not, use requestPath
 		redirectPath = requestPath;
+	}
+
+	// Check if the target has a variable
+	if (redirectPath.includes(":")) {
+		// Split the path into parts
+		redirectPath = replaceVariables(redirectPath, requestUrl.pathname);
 	}
 
 	// Construct a redirect url using target host and redirect path
@@ -69,4 +77,21 @@ export async function handleRequest(request: Request): Promise<Response> {
 
 function emptyPath(path: string): boolean {
 	return path === "/";
+}
+
+function replaceVariables(targetPath: string, requestPath: string): string {
+	const requestPathParts = requestPath.split("/");
+	const targetPathParts = targetPath.split("/");
+
+		// Loop through the parts to replace variables
+		for (let i = 0; i < targetPathParts.length; i++) {
+			if (targetPathParts[i].includes("$")) {
+				// Replace the variable with the actual value
+				const index = parseInt(targetPathParts[i].replace("$", ""), 10);
+				targetPathParts[i] = requestPathParts[index];
+			}
+		}
+
+		// Join the parts back together
+		return targetPathParts.join("/");
 }

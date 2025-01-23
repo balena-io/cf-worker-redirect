@@ -5,7 +5,8 @@
     "module": "commonjs",
     "sourceMap": true,
     "experimentalDecorators": true,
-    "lib": ["esnext", "webworker"]
+    "lib": ["esnext", "webworker"],
+    "types": ["../node_modules/@cloudflare/workers-types/index.d.ts"]
   },
-  "include": ["./*.ts", "../node_modules/@cloudflare/workers-types/index.d.ts"]
+  "include": ["./*.ts"]
 }
