@@ -3,6 +3,7 @@
   "version": "1.2.24",
   "description": "Simple URL shortener running at the edge with Cloudflare Workers and Worker KV.",
   "main": "dist/index.js",
+  "private": true,
   "scripts": {
     "lint": "balena-lint src/ && echo \"Done!\"",
     "lint:fix": "balena-lint src/ --fix && echo \"Done!\"",
