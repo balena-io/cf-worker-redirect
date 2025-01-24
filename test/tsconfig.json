@@ -7,7 +7,9 @@
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "webworker"]
+    "lib": ["esnext", "webworker"],
+    "types": ["@cloudflare/workers-types", "mocha"]
   },
-  "include": ["./*.ts", "../node_modules/@cloudflare/workers-types/index.d.ts"]
+  "include": ["./*.ts"],
+  "exclude": ["node_modules/", "dist"]
 }

@@ -1,6 +1,6 @@
 // set up global namespace for worker environment
 // import * as makeServiceWorkerEnv from "service-worker-mock";
-// declare var global: any;
+declare var global: any;
 // const env = makeServiceWorkerEnv();
 // delete env.navigator;
 // Object.assign(global, env);
@@ -17,5 +17,5 @@ global.REDIRECT_KV = {
   put: async (key: string, value: string) => {
     // Put is NOOP in this project
     return false;
-  }
+  },
 };
