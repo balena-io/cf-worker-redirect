@@ -1,0 +1,6 @@
+{
+  "source.com/": "https://destination.com/",
+  "missingtrailing.com": "https://destination.com/",
+  "sourcetopath.com": "https://destination.com/path",
+  "sourcetopathtrailing.com/": "https://destination.com/path/"
+}
