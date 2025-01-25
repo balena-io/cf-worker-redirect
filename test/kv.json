@@ -1,6 +1,7 @@
 {
   "source.com/": "https://destination.com/",
-  "missingtrailing.com": "https://destination.com/",
+  "notrailing.com": "https://destination.com/",
   "sourcetopath.com": "https://destination.com/path",
-  "sourcetopathtrailing.com/": "https://destination.com/path/"
+  "sourcetopathtrailing.com/": "https://destination.com/path/",
+  "replace.com/replace": "https://destination.com/replace/$3/$2"
 }
