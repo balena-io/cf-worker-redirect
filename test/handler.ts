@@ -10,6 +10,10 @@ const routeTest = {
   "https://notrailing.com": "https://destination.com/",
   "https://replace.com/replace/hello/world":
     "https://destination.com/replace/world/hello",
+  "https://source.com/index?0[0][n]=any&0[0][o]=full_text_search&0[0][v]=rosetta":
+    "https://destination.com/index?0[0][n]=any&0[0][o]=full_text_search&0[0][v]=rosetta",
+  "https://searchparameters.com/":
+    "https://destination.com/index?0[0][n]=any&0[0][o]=full_text_search&0[0][v]=rosetta",
 };
 
 const test404 = [
@@ -21,11 +25,16 @@ describe("handler returns target when asked for source", () => {
   for (let source in routeTest) {
     if (Object.prototype.hasOwnProperty.call(routeTest, source)) {
       const destination = routeTest[source];
+      if (!source.startsWith("http")) {
+        source = `https://${source}`;
+      }
       it(`route from ${source} to ${destination}`, async () => {
         const request = new Request(`${source}`, { method: "GET" });
         const result = await handleRequest(request);
         expect(result.status).to.equal(301);
-        expect(result.headers.get("location")).to.equal(destination);
+        expect(decodeURIComponent(result.headers.get("location"))).to.equal(
+          decodeURIComponent(destination),
+        );
       });
     }
   }

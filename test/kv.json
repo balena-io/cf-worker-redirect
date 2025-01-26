@@ -3,5 +3,6 @@
   "notrailing.com": "https://destination.com/",
   "sourcetopath.com": "https://destination.com/path",
   "sourcetopathtrailing.com/": "https://destination.com/path/",
-  "replace.com/replace": "https://destination.com/replace/$3/$2"
+  "replace.com/replace": "https://destination.com/replace/$3/$2",
+  "searchparameters.com/": "https://destination.com/index?0[0][n]=any&0[0][o]=full_text_search&0[0][v]=rosetta"
 }

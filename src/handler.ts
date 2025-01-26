@@ -66,10 +66,15 @@ export async function handleRequest(request: Request): Promise<Response> {
 	const redirectUrl = new URL(
 		`${targetUrl.protocol}//${targetUrl.host}${redirectPath}`,
 	);
-	Array.from(requestUrl.searchParams).forEach(([key, val]) => {
+	// Add the search params from the target to the redirect URL
+	Array.from(targetUrl.searchParams).forEach(([key, val]) => {
 		if (redirectUrl.searchParams.has(key) === false) {
 			redirectUrl.searchParams.set(key, val);
 		}
+	});
+	// Override the search params with the ones from the request
+	Array.from(requestUrl.searchParams).forEach(([key, val]) => {
+		redirectUrl.searchParams.set(key, val);
 	});
 
 	// Redirect to the target URL
