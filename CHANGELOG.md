@@ -4,6 +4,15 @@
 
 ### Dependency updates
 
+# v1.2.25
+## (2025-02-12)
+
+* patch: set as private [Edwin Joassart]
+* patch: upgrade webpack [Edwin Joassart]
+* patch: switch to balena-lint [Edwin Joassart]
+* patch: add proper tests [Edwin Joassart]
+* patch: switch gh workflow to flowzone [Edwin Joassart]
+
 - [`1c24f1f`](https://github.com/betahuhn/cf-worker-redirect/commit/1c24f1f)  Bump webpack from 5.58.0 to 5.58.1
 - [`f34a09e`](https://github.com/betahuhn/cf-worker-redirect/commit/f34a09e)  Bump worker-setup from 1.4.16 to 1.4.17
 - [`91408bc`](https://github.com/betahuhn/cf-worker-redirect/commit/91408bc)  Bump typescript from 4.4.3 to 4.4.4

@@ -1,0 +1,44 @@
+- commits:
+    - subject: "patch: set as private"
+      hash: f9ab54cdd5e7a971004576c2628e3812771faedc
+      body: ""
+      footer: {}
+      author: Edwin Joassart
+    - subject: "patch: upgrade webpack"
+      hash: e054ed5eaae4ccb62323ae11be14bd0c6c258ad3
+      body: ""
+      footer: {}
+      author: Edwin Joassart
+    - subject: "patch: switch to balena-lint"
+      hash: 721ec03c9db0300579958a8dd2e8a977c97dc96c
+      body: ""
+      footer: {}
+      author: Edwin Joassart
+    - subject: "patch: add proper tests"
+      hash: a2528afb58c16f50e9c82dcd5fd547962ffd0085
+      body: ""
+      footer: {}
+      author: Edwin Joassart
+    - subject: "patch: switch gh workflow to flowzone"
+      hash: 5adb081dfb4821514af7730f1e3ab81304a8a6ea
+      body: ""
+      footer: {}
+      author: Edwin Joassart
+  version: 1.2.25
+  title: ""
+  date: 2025-02-12T10:22:13.399Z
+- version: 1.2.24
+  date: 2023-11-28T13:34:24Z
+  commits:
+    - hash: 8dddd380ff4320f16129cecea9bc504df81c6fae
+      author: 20k-ultra
+      footers:
+        signed-off-by: 20k-ultra <3946250+20k-ultra@users.noreply.github.com>
+      subject: Persist paths on redirect matches
+      body: ""
+    - hash: f589224e2b10b2c9a5b28d792aa7101b834d86b3
+      author: 20k-ultra
+      footers:
+        signed-off-by: 20k-ultra <3946250+20k-ultra@users.noreply.github.com>
+      subject: Simplify redirectPath selection condition
+      body: ""
