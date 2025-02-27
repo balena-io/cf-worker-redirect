@@ -4,6 +4,12 @@
 
 ### Dependency updates
 
+# v1.3.0
+## (2025-02-27)
+
+* patch: fix handling of target with searchParameters [Edwin Joassart]
+* minor: handle variables in target path [Edwin Joassart]
+
 # v1.2.26
 ## (2025-02-27)
 
