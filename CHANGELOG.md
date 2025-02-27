@@ -4,6 +4,11 @@
 
 ### Dependency updates
 
+# v1.2.26
+## (2025-02-27)
+
+* patch: bump deps [Edwin Joassart]
+
 # v1.2.25
 ## (2025-02-12)
 

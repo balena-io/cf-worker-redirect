@@ -1,4 +1,13 @@
 - commits:
+    - subject: "patch: bump deps"
+      hash: 16829261ab086468eb2d344ee07a2c549f054ece
+      body: ""
+      footer: {}
+      author: Edwin Joassart
+  version: 1.2.26
+  title: ""
+  date: 2025-02-27T09:58:52.117Z
+- commits:
     - subject: "patch: set as private"
       hash: f9ab54cdd5e7a971004576c2628e3812771faedc
       body: ""
