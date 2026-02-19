@@ -1,4 +1,17 @@
 - commits:
+    - subject: "Add id-token: write permission for NPM OIDC publishing"
+      hash: 3e13fb5c9489148dad36028743758e91f5edd641
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+  version: 1.3.1
+  title: ""
+  date: 2026-02-19T02:07:15.770Z
+- commits:
     - subject: "patch: fix handling of target with searchParameters"
       hash: f77287c56d18b92c1f91a5eac779b2c0e078dbb3
       body: ""

@@ -4,6 +4,11 @@
 
 ### Dependency updates
 
+# v1.3.1
+## (2026-02-19)
+
+* Add id-token: write permission for NPM OIDC publishing [Kyle Harding]
+
 # v1.3.0
 ## (2025-02-27)
 
